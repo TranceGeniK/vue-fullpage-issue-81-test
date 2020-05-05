@@ -7,12 +7,15 @@
 <script>
   import fullpage from 'fullpage.js/dist/fullpage.extensions.min';
   import * as constants from './constants';
-  
+
+  import addRemovedHook from 'vue-removed-hook-mixin';
+
   function camelToKebab(string) {
     return string.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
   }
   
   export default {
+    mixins: [addRemovedHook],
     methods: {
       build() {
         var slideSelector = this.options.slideSelector || '.slide';
@@ -58,8 +61,8 @@
     mounted() {
       this.init();
     },
-    
-    beforeDestroy() {
+  
+    removed() {
       if (typeof this.api !== 'undefined') {
         this.destroy();
       }
