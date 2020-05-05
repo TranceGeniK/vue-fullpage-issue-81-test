@@ -4,7 +4,7 @@ import router from './router';
 
 import 'fullpage.js/vendors/scrolloverflow';
 import 'fullpage.js/dist/fullpage.css';
-import VueFullPage from 'vue-fullpage.js';
+import VueFullPage from '@/components/vue-fullpage';
 
 Vue.config.productionTip = false;
 

@@ -1,6 +1,6 @@
 <template>
   <div class="fullpage">
-    <full-page :options="options" ref="fullpage">
+    <full-page :options="options" ref="fullpage" :destroy-only-events="true">
       <div class="section">
         <h3>vue-fullpage.js</h3>
       </div>
